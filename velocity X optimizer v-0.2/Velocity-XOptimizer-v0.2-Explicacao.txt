@@ -1,0 +1,219 @@
+VELOCITY XOPTIMIZER v0.2
+Otimizador para Windows 10 e Windows 11
+Criado por JonzinhoXD
+
+============================================================
+SOBRE O PROJETO
+============================================================
+
+O Velocity XOptimizer é um otimizador para Windows feito em Batch (.BAT) e executado pelo CMD.
+
+A proposta da versão 0.2 é deixar o sistema mais organizado e reduzir processos, serviços,
+tarefas, recursos em segundo plano e opções que podem consumir CPU, RAM, disco ou rede,
+principalmente com foco em jogos e desempenho.
+
+O programa pede permissão de administrador porque algumas alterações precisam ser feitas no
+registro do Windows, em serviços, tarefas agendadas e configurações de energia.
+
+IMPORTANTE:
+As otimizações não fazem overclock e não aumentam fisicamente o limite do processador.
+O programa trabalha dentro das configurações que o Windows e o hardware permitem.
+
+
+============================================================
+OPÇÃO 1 - LIMPAR TEMPORÁRIOS E CACHE
+============================================================
+
+A opção 1 faz uma limpeza de arquivos temporários e caches para recuperar espaço no disco.
+
+Ela pode limpar:
+- Temporários do usuário e do Windows.
+- Cache do Windows Update e do Delivery Optimization.
+- Relatórios de erro, dumps e alguns logs antigos.
+- Cache de miniaturas, internet e Microsoft Store.
+- Cache dos navegadores Chrome, Edge, Brave, Opera, Opera GX, Vivaldi e Firefox.
+- Cache do Discord, Steam e Spotify.
+- Lixeira.
+- Cache de DNS.
+- Cache de shaders, incluindo caches de Direct3D, NVIDIA e AMD quando encontrados.
+
+Também existe uma limpeza profunda opcional de componentes antigos do Windows.
+
+O programa pode encontrar uma instalação antiga do Windows (Windows.old / pastas relacionadas)
+e perguntar separadamente se o usuário deseja apagar. Essa limpeza pode liberar vários GB,
+mas impede voltar para a instalação anterior por esse caminho e não deve ser feita sem certeza.
+
+O programa tenta ignorar arquivos que estejam em uso em vez de forçar a exclusão.
+
+A limpeza mostra o espaço liberado e o espaço livre disponível no disco do sistema.
+
+
+============================================================
+OPÇÃO 2 - DESATIVAR APLICATIVOS EM SEGUNDO PLANO
+============================================================
+
+A opção 2 reduz atividades em segundo plano que podem consumir recursos.
+
+Ela pode desativar:
+- Aplicativos em segundo plano do Windows.
+- Widgets / Notícias e Interesses.
+- Algumas funções de telemetria e coleta de dados.
+- Relatórios de erros e algumas notificações de feedback.
+- Histórico e atividade do usuário.
+- Algumas sugestões, anúncios e instalações promovidas.
+- Copilot, Recall e algumas funções de pesquisa web do menu Iniciar.
+- Diversas tarefas agendadas de diagnóstico e coleta de dados.
+- Alguns serviços relacionados a diagnóstico, telemetria e recursos secundários.
+- Alguns processos em segundo plano que já estiverem abertos.
+
+O programa informa que não altera Windows Defender, Firewall e Windows Update.
+
+As alterações são registradas para permitir a reversão posteriormente.
+
+ATENÇÃO:
+Tarefas e serviços que já estavam desativados antes da otimização são preservados como estavam.
+
+
+============================================================
+OPÇÃO 3 - OTIMIZADOR DO WINDOWS / MODO JOGO
+============================================================
+
+A opção 3 foi criada com foco em jogos.
+
+Ela aplica, entre outras coisas:
+- Modo de Jogo do Windows.
+- Desativação de gravação/Game DVR em segundo plano.
+- Redução de interrupções da Game Bar/Xbox durante os jogos.
+- Ajustes de prioridade para tarefas relacionadas a jogos.
+- Ajustes do sistema multimídia e de rede usados pelo Windows.
+- Agendamento de GPU por hardware quando suportado pelo sistema.
+- Plano de energia próprio do Velocity XOptimizer.
+- Ajustes do plano de energia para reduzir economia de energia na tomada.
+- Opção de desativar a aceleração do mouse.
+
+O programa cria um ponto de restauração antes de aplicar essa opção.
+
+A aceleração do mouse é opcional e pode ser deixada ligada pelo usuário.
+
+Após aplicar, o programa recomenda reiniciar o PC para que algumas alterações,
+como o agendamento de GPU, tenham efeito completo.
+
+
+============================================================
+OPÇÃO 4 - OTIMIZADOR DO JON / DESEMPENHO MÁXIMO
+============================================================
+
+A opção 4 é o modo mais agressivo do programa.
+
+Ela também aplica as opções 2 e 3 e adiciona outras alterações para reduzir processos,
+serviços e efeitos visuais.
+
+Pode aplicar:
+- Desativação de efeitos visuais, animações e transparência.
+- Redução do atraso de menus e da inicialização.
+- Desativação de alguns serviços secundários.
+- Serviços colocados em inicialização manual quando apropriado.
+- Redução de processos do svchost por meio de uma configuração do Windows.
+- Redução da execução de Edge e Chrome em segundo plano.
+- Remoção de vários programas da inicialização automática, quando encontrados.
+- Desativação de tarefas agendadas adicionais.
+- Ajustes de prioridade e rede.
+- Ajustes de energia para CPU, PCIe, USB e disco na tomada.
+- Desativação do Power Throttling em desktops.
+- Ajustes adicionais para reduzir atrasos de rede.
+
+O programa detecta se o computador é notebook e evita aplicar algumas configurações agressivas
+na bateria.
+
+Também existe uma opção para desligar a Integridade de Memória (VBS).
+
+AVISO SOBRE VBS:
+Desativar a Integridade de Memória pode melhorar o desempenho em alguns computadores/jogos,
+mas reduz uma camada de segurança do Windows. Essa opção é perguntada separadamente.
+
+Também existe uma opção para desligar a hibernação e a Inicialização Rápida.
+
+AVISO SOBRE HIBERNAÇÃO:
+Ao desligar a hibernação, o arquivo hiberfil.sys é removido e pode liberar vários GB,
+mas a hibernação deixa de funcionar.
+
+Também existe uma opção para desligar os serviços do Xbox.
+
+AVISO SOBRE XBOX:
+Desligar esses serviços pode quebrar login do aplicativo Xbox, Game Pass, jogos da Microsoft Store
+que usam conta Xbox e recursos de salvamento em nuvem do Xbox.
+
+
+============================================================
+RESTAURAÇÃO E SEGURANÇA
+============================================================
+
+As opções 2, 3 e 4 criam backups internos antes de alterar registros, serviços e tarefas.
+
+O programa guarda os valores originais para tentar restaurá-los posteriormente.
+
+A opção 5 permite:
+- Ver quais otimizações estão ativas.
+- Ver desde quando estão ativas.
+- Ver o histórico das últimas ações.
+- Abrir a Restauração do Sistema do Windows.
+- Desativar individualmente as opções 2, 3 ou 4.
+- Desativar todas as otimizações ativas.
+
+Ao desfazer as alterações, o programa tenta voltar aos valores que estavam no computador
+antes da aplicação, e não simplesmente aplicar um conjunto fixo de valores padrão.
+
+O programa também cria uma tarefa agendada chamada:
+VelocityXOptimizer_AutoApply
+
+Enquanto houver otimizações 2, 3 ou 4 ativas, algumas alterações podem ser reaplicadas
+automaticamente no login do Windows.
+
+
+============================================================
+OPÇÃO 6 - REDES SOCIAIS
+============================================================
+
+Abre o perfil do projeto/dono no TikTok ou copia o @ para a área de transferência.
+
+TikTok:
+@surejonn
+
+
+============================================================
+OPÇÃO 7 - NOVIDADES
+============================================================
+
+Mostra no próprio programa as principais mudanças e melhorias da versão 0.2.
+
+
+============================================================
+REQUISITOS
+============================================================
+
+- Windows 10 ou Windows 11.
+- Executar com permissão de administrador.
+- Recomenda-se criar um ponto de restauração e manter backups importantes antes de usar
+  otimizações mais agressivas.
+- Algumas alterações só têm efeito completo após reiniciar o Windows.
+
+
+============================================================
+OBSERVAÇÃO SOBRE DESEMPENHO
+============================================================
+
+O objetivo do Velocity XOptimizer é reduzir processos e atividades desnecessárias e ajustar
+configurações do Windows para uma experiência mais leve e voltada para jogos.
+
+Os resultados podem variar de acordo com o hardware, versão do Windows, drivers, programas
+instalados e perfil de uso. O programa não garante uma quantidade específica de FPS ou uma
+melhoria igual em todos os computadores.
+
+
+============================================================
+VELOCITY XOPTIMIZER v0.2
+============================================================
+
+Criado por JonzinhoXD
+Suporte: Windows 10 / Windows 11
+TikTok: @surejonn
