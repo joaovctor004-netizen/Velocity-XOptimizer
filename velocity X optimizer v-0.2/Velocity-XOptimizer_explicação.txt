@@ -1,0 +1,276 @@
+============================================================
+              VELOCITY XOPTIMIZER - v0.1
+              Criado por JonzinhoXD
+              TikTok: @surejon
+============================================================
+
+SOBRE O VELOCITY XOPTIMIZER
+
+O Velocity XOptimizer é um otimizador feito em Batch (.BAT) para
+Windows 10 e Windows 11.
+
+A ideia do projeto é reunir alguns ajustes do próprio Windows em
+um programa simples pelo CMD, sem precisar ficar entrando em vários
+menus e configurações manualmente.
+
+O projeto ainda está no começo (v0.1), então novas funções e
+melhorias podem aparecer com o tempo.
+
+Criador: JonzinhoXD
+TikTok: @surejon
+
+------------------------------------------------------------
+COMPATIBILIDADE
+------------------------------------------------------------
+
+- Windows 10
+- Windows 11
+
+O programa verifica a versão do Windows antes de abrir o menu.
+Algumas funções precisam de permissão de administrador para serem
+aplicadas.
+
+------------------------------------------------------------
+COMO USAR
+------------------------------------------------------------
+
+1. Execute o arquivo .BAT.
+2. Caso seja necessário, aceite a permissão de administrador.
+3. Escolha uma das opções do menu.
+4. Leia o que a opção vai fazer antes de confirmar.
+
+O programa cria uma pasta chamada:
+
+    VelocityXOptimizer_Data
+
+Essa pasta fica junto do .BAT e guarda os arquivos de controle e
+o histórico das ações feitas pelo programa.
+
+------------------------------------------------------------
+OPÇÕES DO MENU
+------------------------------------------------------------
+
+[1] LIMPAR ARQUIVOS TEMPORÁRIOS
+
+Limpa arquivos temporários do usuário, arquivos temporários do
+Windows e a Lixeira.
+
+A limpeza não foi feita para apagar fotos, documentos, vídeos e
+outros arquivos pessoais comuns.
+
+Mesmo assim, é sempre bom conferir o que você está executando antes
+de usar qualquer ferramenta de limpeza.
+
+------------------------------------------------------------
+
+[2] APLICATIVOS EM SEGUNDO PLANO
+
+Essa opção desativa aplicativos em segundo plano e alguns recursos
+do Windows que podem ficar rodando sem necessidade.
+
+Também desativa algumas tarefas de telemetria/diagnóstico e alguns
+serviços específicos, como:
+
+- DiagTrack
+- dmwappushservice
+- RetailDemo
+- MapsBroker
+
+Algumas tarefas do Agendador de Tarefas relacionadas a diagnóstico,
+feedback e relatório de erros também são desativadas.
+
+O Windows Defender, Firewall e a Central de Segurança não são
+desativados por essa opção.
+
+Essa função pode ser revertida pelo próprio programa.
+
+------------------------------------------------------------
+
+[3] OTIMIZADOR DO WINDOWS
+
+Ativa alguns ajustes voltados para jogos e desempenho.
+
+Entre eles estão:
+
+- Modo de Jogo do Windows
+- Desativação de Game DVR/gravação em segundo plano
+- Ajustes do perfil multimídia
+- Ajustes de prioridade para tarefas de jogos
+- Ajuste de prioridade de GPU para tarefas de jogos
+- Ativação do agendamento de GPU por hardware quando suportado
+- Ativação do plano de energia de Alto Desempenho
+
+Depois de aplicar essa opção, o programa recomenda reiniciar o PC
+para que alguns ajustes tenham efeito completo.
+
+Essa opção também pode ser revertida pelo menu do programa.
+
+------------------------------------------------------------
+
+[4] OTIMIZADOR DO JON
+
+Essa é a opção mais forte do Velocity XOptimizer.
+
+Ela aplica os ajustes das opções 2 e 3 e adiciona outras mudanças
+para tentar reduzir processos e recursos rodando em segundo plano.
+
+Entre os ajustes feitos estão:
+
+- Redução de efeitos visuais e animações
+- Desativação de transparência
+- Desativação de algumas animações da barra de tarefas
+- Desativação de alguns serviços que podem não ser necessários para
+  determinados usuários
+- Ajustes de prioridade do sistema
+- Ajustes de Power Throttling
+- Ajustes no Delivery Optimization
+- Ajustes de TCP em interfaces de rede
+- Ajustes de energia e desempenho do processador
+- Redução do "core parking" quando permitido pelo Windows
+- Configuração do processador para permanecer em níveis altos de
+  desempenho
+
+Também tenta remover alguns programas específicos da inicialização,
+mas somente quando eles existem no sistema.
+
+Entre os nomes procurados estão:
+
+- Spotify
+- Skype
+- Teams
+- iTunes
+- QuickTime
+- Adobe
+- Discord
+- Epic Games
+- Origin
+- uTorrent
+- CCleaner
+
+Antes de remover entradas da inicialização, o programa salva os dados
+encontrados em um arquivo de backup para poder restaurá-los depois.
+
+IMPORTANTE:
+
+Os ajustes de CPU dessa opção NÃO são overclock.
+
+O Windows não desbloqueia limite de fábrica do processador através
+desse .BAT. O que o programa faz é mudar configurações de energia e
+desempenho para manter a CPU em níveis mais altos dentro do que o
+próprio hardware e o Windows permitem.
+
+Como essa é uma opção mais agressiva, pode não ser a melhor escolha
+para todo computador. O resultado também pode variar bastante
+dependendo do hardware, dos drivers e da configuração do sistema.
+
+------------------------------------------------------------
+
+[5] DESATIVAR OPÇÕES
+
+Esse menu serve para desfazer as otimizações que foram ativadas.
+
+É possível:
+
+- Reverter a opção 2
+- Reverter a opção 3
+- Reverter a opção 4
+- Desativar todas as opções ativas de uma vez
+
+A opção 4 também tenta restaurar as entradas de inicialização que
+foram salvas no backup.
+
+ATENÇÃO:
+
+A reversão devolve várias configurações para valores definidos pelo
+próprio script. Isso significa que ela não garante recuperar alguma
+configuração personalizada que já existia no PC antes de usar o
+Velocity XOptimizer.
+
+------------------------------------------------------------
+
+[6] REDES SOCIAIS
+
+Essa área é apenas informativa.
+
+Mostra o TikTok do criador:
+
+TikTok: @surejon
+
+Não existe nenhuma configuração de otimização nessa opção.
+
+------------------------------------------------------------
+
+[7] SAIR
+
+Fecha o programa.
+
+Quando existem otimizações ativas, elas podem continuar sendo
+reaplicadas automaticamente quando o usuário entrar no Windows.
+
+------------------------------------------------------------
+APLICAÇÃO AUTOMÁTICA
+------------------------------------------------------------
+
+Quando alguma das opções 2, 3 ou 4 está ativa, o programa cria uma
+tarefa agendada chamada:
+
+    VelocityXOptimizer_AutoApply
+
+Essa tarefa é usada para reaplicar as otimizações ativas no login do
+Windows.
+
+Ao desativar as otimizações, a tarefa é removida quando não houver
+mais nenhuma opção ativa.
+
+------------------------------------------------------------
+ARQUIVOS CRIADOS PELO PROGRAMA
+------------------------------------------------------------
+
+Na mesma pasta do .BAT é criada a pasta:
+
+    VelocityXOptimizer_Data
+
+Dentro dela podem aparecer arquivos usados para controlar o estado
+das opções e registrar o que foi feito.
+
+Também existe:
+
+    log.txt
+
+Esse arquivo guarda um histórico das ações executadas pelo programa.
+
+Quando necessário, também é criado um arquivo de backup das entradas
+de inicialização para permitir a restauração.
+
+------------------------------------------------------------
+SEGURANÇA E CUIDADOS
+------------------------------------------------------------
+
+O Velocity XOptimizer modifica configurações do Windows, registro,
+serviços, tarefas agendadas, energia e inicialização.
+
+Por isso:
+
+- Leia cada opção antes de confirmar.
+- Não execute arquivos .BAT de origem desconhecida.
+- Faça um ponto de restauração do Windows antes de testar alterações
+  mais agressivas, principalmente em computadores importantes.
+- O resultado das otimizações pode mudar de PC para PC.
+- Mais otimização não significa necessariamente mais FPS em todos
+  os jogos ou mais desempenho em qualquer situação.
+
+O projeto foi pensado para facilitar alguns ajustes que normalmente
+seriam feitos manualmente pelo Windows.
+
+------------------------------------------------------------
+VERSÃO
+------------------------------------------------------------
+
+Velocity XOptimizer v0.1
+
+Projeto novo e ainda em desenvolvimento.
+
+Criado por JonzinhoXD
+TikTok: @surejon
+
+============================================================
